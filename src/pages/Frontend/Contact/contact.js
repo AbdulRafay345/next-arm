@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import call_icon from '../../../assets/images/call.png';
 import email_icon from '../../../assets/images/email.png';
 import location_icon from '../../../assets/images/locations.png';
@@ -16,6 +16,9 @@ import { Link } from 'react-router-dom';
 const { Text, Title } = Typography;
 
 export default function Contact() {
+  useEffect(()=>{
+    window.scrollTo(0,0)
+  },[])
   const isMobile = useMediaQuery({ maxWidth: 767 });
 
   const [name, setName] = useState('');

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState,useEffect } from 'react';
 import bannerImg from '../../../assets/images/page-banner.jpg';
 import { Button, Col, Input, Row, Typography } from 'antd';
 import Footer from '../../../components/Footer';
@@ -12,6 +12,9 @@ import emailjs from '@emailjs/browser';
 const { Title } = Typography
 
 export default function Career() {
+    useEffect(()=>{
+        window.scrollTo(0,0)
+      },[])
 
     const isMobile = useMediaQuery({ maxWidth: 767 });
 

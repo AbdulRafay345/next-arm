@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import aboutimg from '../../../assets/images/about-9.jpg';
 import bannerImg from '../../../assets/images/page-banner.jpg';
 import { Button, Typography } from 'antd';
@@ -9,6 +9,10 @@ import { Link } from 'react-router-dom';
 const { Title, Text } = Typography;
 
 export default function About() {
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    }, [])
+
     return (
         <>
             {/* Banner with background image */}
@@ -50,9 +54,9 @@ export default function About() {
                 <img src={aboutimg} alt="about" className="about-image" />
             </div>
 
-            <div  className="footer">
-        <Footer />
-      </div>
+            <div className="footer">
+                <Footer />
+            </div>
         </>
     );
 }

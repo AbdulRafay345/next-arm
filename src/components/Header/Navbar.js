@@ -79,7 +79,7 @@ export default function Navbar() {
                         <li className="nav-item fs-6">
                         </li>
                     </ul>
-                    <Button   style={{height:'40px', backgroundColor:'#0185c3' , color:'white'}}> <Link className={`nav-links ${activeLink === 'contact' ? 'active' : ''}`} style={{ textDecoration:'none'}} to='/contact' onClick={() => handleLinkClick('contact')}>Let's talk</Link></Button>
+                    <Link className={`nav-links ${activeLink === 'contact' ? 'active' : ''}`} style={{ textDecoration:'none'}} to='/contact' onClick={() => handleLinkClick('contact')}><Button   style={{height:'40px', backgroundColor:'#0185c3' , color:'white'}}>Let's talk</Button></Link>
                 </div>
             </div>
         </nav>
